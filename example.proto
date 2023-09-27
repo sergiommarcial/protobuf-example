@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package myservice;
+option go_package = "/gen;gen";
+
+service MyService {
+    rpc GetData (DataRequest) returns (DataResponse);
+}
+
+message DataRequest {
+    string message = 1;
+}
+
+message DataResponse {
+    string reply = 1;
+}
